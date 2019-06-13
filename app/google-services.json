@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "732468633832",
+    "firebase_url": "https://lapit-b2f3d.firebaseio.com",
+    "project_id": "lapit-b2f3d",
+    "storage_bucket": "lapit-b2f3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732468633832:android:f22642ed56f59ac1",
+        "android_client_info": {
+          "package_name": "sj.android.com.lapit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "732468633832-3it88e6f6tvc7riqimf2cq8hmh0ulpr8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sj.android.com.lapit",
+            "certificate_hash": "6a2902ec3fd1696ef7af2381e1a6931be7001156"
+          }
+        },
+        {
+          "client_id": "732468633832-a0pg4mo27ql09gtbfhc82tiddacg89u1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOs3kz23wo_keEfG0g8edriF0Kfw7InSg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "732468633832-a0pg4mo27ql09gtbfhc82tiddacg89u1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

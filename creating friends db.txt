@@ -1,0 +1,43 @@
+mFriendDatabase.child(currentUser.getUid()).child(user_id).setValue(currentDate).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if(task.isSuccessful()){
+                                mFriendDatabase.child(user_id).child(currentUser.getUid()).setValue(currentDate).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        mFriendReqDatabase.child(currentUser.getUid()).child(user_id).child("request_type").removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                if(task.isSuccessful()){
+                                                    mFriendReqDatabase.child(user_id).child(currentUser.getUid()).child("request_type").removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                        @Override
+                                                        public void onComplete(@NonNull Task<Void> task) {
+                                                            if(task.isSuccessful()){
+                                                                Toast.makeText(ProfileActivity.this,"You are friends now",Toast.LENGTH_SHORT).show();
+                                                                mProfileSendReqBtn.setText("Unfriend This Person");
+                                                                mCurrentState="friends";
+
+
+                                                                mDeclineReqBtn.setEnabled(false);
+                                                                mDeclineReqBtn.setVisibility(View.INVISIBLE);
+                                                                }else{
+
+                                                                Toast.makeText(ProfileActivity.this,"Error occured while Deleting the Request Type in Friend Req Database",Toast.LENGTH_SHORT).show();
+                                                            }
+                                                        }
+                                                    });
+                                                }else{
+                                                    Toast.makeText(ProfileActivity.this,"Unable to Delete the Request Type in Friend Req Database",Toast.LENGTH_SHORT).show();
+                                                }
+
+                                            }
+                                        });
+
+                                    }
+                                });
+                            }else{
+                                Toast.makeText(ProfileActivity.this,"Unable to set Date in Friends Database",Toast.LENGTH_SHORT);
+                            }
+                            
+                        }
+                    });
